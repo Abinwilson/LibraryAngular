@@ -1,0 +1,21 @@
+<h3>Add Books</h3>
+
+<form #form="ngForm" (ngSubmit)="onsubmit()">
+    <!--ngForm Angular Directive to create a form as a form object-->
+    <!--form object  {'Title':'','Author':'','Price':'',}-->
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" name="Title" #Title="ngModel" [(ngModel)]="data.title" placeholder="Enter Title">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text" class="form-control" name="Author" #Author="ngModel" [(ngModel)]="data.author" placeholder="Enter Author">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" name="Price" #Price="ngModel" [(ngModel)]="data.price" placeholder="Enter Price">
+      </div>
+      <div class="mb-3">
+        <input type="submit" class="form-control">
+      </div>
+  </form>

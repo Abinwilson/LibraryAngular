@@ -1,0 +1,13 @@
+<div style="height:350px;width:350px;background-color: rgb(10, 245, 245); margin-top:120px;margin-left: 500px;padding-top: 50px;padding-left: 80px;">
+    <div *ngIf="isAuthenticated==true">
+        <button class="btn btn-success" [routerLink]="['addbooks']" style="background-color: rgb(8, 248, 60);height: 50px;width: 200px;">Add Books</button><br><br>
+        <button class="btn btn-success" [routerLink]="['viewbooks']" style="background-color: rgb(8, 246, 75);height: 50px;width: 200px;">View Books</button><br><br>
+        <button class="btn btn-success" (click)="logout()" style="background-color: rgb(7, 249, 31);height: 50px;width: 200px;">Logout</button><br><br>
+    </div>
+    <div *ngIf="isAuthenticated==false">
+        <button class="btn btn-success" [routerLink]="['register']" style="background-color: rgb(5, 250, 46);height: 50px;width: 200px;">Register</button><br><br>
+        <button class="btn btn-success" [routerLink]="['login']" style="background-color: rgb(7, 249, 31);height: 50px;width: 200px;">Login</button><br><br>
+    </div>
+</div>
+
+<!-- <button class="btn btn-danger" (click)="view()">Link To View Page</button> -->
